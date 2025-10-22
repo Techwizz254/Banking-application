@@ -7,6 +7,7 @@ A simple banking application written in c.
 It allows the user to deposit , withdraw, check their balances.
 We'll assume debit isn't allowed therefore negative balances aren't allowed.
 Has a menu interface.
+Will automatically close if wrong inputs are placed
 
 
 
