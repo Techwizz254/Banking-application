@@ -21,35 +21,37 @@ switch (menu)
  case 1:
 printf("Enter amount to deposit\n");
 scanf("%d", &amount);
+if(amount>0){
 balance+=amount;
-printf("You have deposited %d shillings succesfully", amount);
-
+printf("You have deposited %d shillings succesfully\n", amount);
+}
+else{
+      printf("Cannot deposit negative amount\n");
+}
 break;
+
  case 2:
-printf("Enter amount to withdraw:\n");
-scanf("%d", &amount);
-if(amount<=balance)
-{printf("You have withdrawn %d shillings succesfully", amount);
-
+ printf("Enter amount to withdraw:\n");
+ scanf("%d", &amount);
+if(amount<=balance){
+   printf("You have withdrawn %d shillings succesfully", amount);
 balance-=amount;
-
-}else{
+}
+else{
     printf("Insufficient funds\n");
 }
 break;
  case 3:
     printf("Account balance: %d", balance);
-break;
+    break;
  case 4:
     printf("Exiting application\n");
     break;
 
  default:
-    printf("Invalid option");
+    printf("Invalid option\a");
 break;
 }
-getchar();
-getchar();
 }while (menu != 4);
 return 0;
 }
